@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="matrix.css">
+	</head>
+	<body>
+		<div class="menu_bar">Console</bar>
+		<div class="black_box">
+			<p id="typewriter"></p>
+			<p id="typewriter2"></p>
+			<script>
+				const typewriter = (param) => {
+					let el = document.querySelector(param.el);
+					let speed = param.speed;
+					let string = param.string.split("");
+					string.forEach((char, index) => {
+						setTimeout(() => {
+							el.textContent += char;
+						}, speed * index);
+					});
+				};
+				typewriter({
+					el: "#typewriter",
+					string: "Wake up, Neo...",
+					speed: 100
+				});
+				typewriter({
+					el: "#typewriter2",
+					string: "\n\n\n\n\n\n\n\n\n\n\n\n\nThe Matrix has you...",
+					speed: 100
+				});
+			</script>
+		</bar>
+	</body>
+</html>
